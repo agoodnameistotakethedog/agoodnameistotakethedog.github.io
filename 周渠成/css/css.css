@@ -1,0 +1,56 @@
+body{
+	background: url(../img/timgCANY2DYU.jpg) no-repeat;
+	background-size: cover;
+}
+
+.clearfix::after{
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.zqc{
+	width: 1200px;
+	margin: auto;
+	
+}
+header{
+	position: relative;
+}
+.logo h1{
+	display: none;
+}
+li{
+	list-style-type:none;
+}
+img{
+	width: 100px;
+}
+nav.mainNav{
+	position: absolute;
+	/*
+	 绝对定位基准：最近的定位祖先元素
+	 * */
+	right: 0px;
+	top: 0px;
+}
+nav.mainNav li{
+	float: left;
+	margin: 30px;
+}
+nav.mainNav li a{
+	text-decoration: none;
+	color: #fff;
+}
+h2{
+	color: #FFF;
+}
+.mainNav ul li a{
+	padding: 20px;
+	border: 1px solid transparent;
+	transition: color .5s,border .5s;
+}
+.mainNav ul li a:hover{
+	color: #000;
+	border: 1px solid #fff;
+}
