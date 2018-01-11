@@ -1,0 +1,48 @@
+<title></title> <style type="text/css"> .win { width: 300px; height: 300px; background-color: #dfd; margin: auto; position: absolute; left: 0; right: 0; top: 0; bottom: 0; opacity: 0; /*display: none;*/ z-index: 1000; }
+		.win.show{
+			opacity: 1;
+		}
+		
+	</style>
+		
+	<link rel="stylesheet" href="css/animate.css" />
+	<link rel="stylesheet" href="css/font-awesome.min.css" />
+</head>
+<body>
+	<div id ="btn" class="animated bounce">
+		你好，请点击这里
+		<!--<i class="fa fa-address-book"></i>-->
+		<i class="fa fa-th-list"></i>
+		<!--<i class="fa fa-th"></i>-->
+	</div>
+	
+	<script type="text/javascript">
+		var btn = document.getElementById('btn');
+		var oWin;
+		
+		oWin = document.createElement("div");
+		oWin.id = "win";
+		oWin.className = "win";
+		document.body.appendChild(oWin);
+		
+		btn.addEventListener('click',showWin);
+		
+		function showWin(){
+			var event = event||window.event;
+			var target = event.target||event.srcElement;
+			
+			oWin.classList.add('show');
+			oWin.classList.add('bounce');
+			oWin.classList.add('animated');
+			
+			if(target.classList.contains('fa-th-list')){
+				target.classList.remove('fa-th-list');
+				target.classList.add('fa-th');
+			}else{
+				target.classList.add('fa-th-list');
+				target.classList.remove('fa-th');
+			}
+		}
+		
+	</script>
+</body>
